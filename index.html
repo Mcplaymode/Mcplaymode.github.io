@@ -84,7 +84,7 @@
     </section>
 
     <section><h2>Mais Sobre Nossos Serviços</h2></section>
-    <button onclick="document.getElementById('infoservico').style.display='block'">Clique para saber mais</button>
+    <button onclick="apareceOuNao('mensagemContato')" style="cursor: pointer;">Clique para saber mais</button>
     <div id="infoservico">
         <p>Oferecemos Serviços Profissionais de Fotografia</p>
     </div>
@@ -100,12 +100,23 @@
 
     <footer>
         <h2>Contato</h2>
-        <p onclick="document.getElementById('mensagemContato').style.display='block'">Clique aqui para entrar em Contato</p>
+        <p onclick="apareceOuNao('mensagemContato')" style="cursor: pointer;">Clique aqui para entrar em Contato</p>
         <div id="mensagemContato">
             <p>Telefone (11) 123-4567</p>
             <p>Email: Exemplo e-mail</p>
         </div>
     </footer>
+    <script>
+        function apareceOuNao(id){
+            let elemento = document.getElementById(id)
+            if(elemento.style.display =='block'){
+                elemento.style.display = 'none'
+            }
+            else{
+                elemento.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 
 </html>
